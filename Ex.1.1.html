@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Ilmira Dozhdikova">
+  <title>Exercici 1.1</title>
+</head>
+<body>
+  <h3>Exercici 1.1: Arrow functions</h3>
+  <div id="text"></div>
+  <div id="text2"></div>
+  <div id="text3"></div>
+  <div id="text4"></div>
+  <script>
+    /* Exercici 1.1: Arrow functions - Nivell 1 */
+
+    /* Ex.1 */
+    function sum(a, b) {
+      return a + b
+    }
+    
+    document.getElementById('text').innerHTML =`Function before Arrow result: ` + sum(2, 2)
+
+    let sumArrow = (a, b) => a + b
+    
+    document.getElementById('text2').innerHTML =`Arrow function result: ` + sum(2, 2)
+
+    /* Ex.2 */
+
+    let randomNumber= () => ((Math.random() * 100) + 1).toFixed(0)
+
+    document.getElementById('text3').innerHTML =`Random number is: ` + randomNumber()
+
+    /* Ex.3 */
+
+    class Person {
+      constructor(name) {
+        this.name = name
+      }
+      salute = () => `Hola, ${this.name}!`  
+  }    
+    
+    const newName = new Person('Pit')
+   
+    document.getElementById('text4').innerHTML= newName.salute()
+
+
+  </script>
+  
+</body>
+</html>
